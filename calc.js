@@ -2,6 +2,7 @@
 function whichKey(ke){
   const display = document.getElementById("calc-io");
   const key = ke.key || ke.target.textContent;
+
   if (/^[-\d\/\*\+\.\(\)]$/.test(key)) {
     display.value += key;
   }
