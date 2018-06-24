@@ -6,7 +6,7 @@ function whichKey(ke){
   if ("0123456789/*-+.()".includes(key)) {
     display.value += key;
   }
-  if (["=", "Enter"].includes(key)) {
+  if (["=", "Enter"].includes(key) && display.value !== "") {
     display.value = eval(display.value);
   }
   if (["Backspace", "Delete"].includes(key)) {
