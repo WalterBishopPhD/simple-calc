@@ -3,16 +3,17 @@ function whichKey(ke){
   const display = document.getElementById("calc-io");
   const key = ke.key || ke.target.textContent;
 
-  if ("0123456789/*-+.()".includes(key)) {
+if ("0123456789/*-+.()".includes(key)) {
     display.value += key;
   }
-  if (["=", "Enter"].includes(key) && display.value !== "") {
+  if (["=", "Enter"].includes(key) && display.value !== "" && !display.value.match(/(\(\))/g)) {s
     display.value = eval(display.value);
   }
-  if (["Backspace", "Delete"].includes(key)) {
+  if (["Backspace", "Delete", "CE"].includes(key)) {
     display.value = display.value.slice(this.length, -1);
+    display.style.backgroundColor = "";
   }
-  if (["Escape"].includes(key)) {
+  if (["Escape", "AC"].includes(key)) {
     display.value = "";
   }
 }
