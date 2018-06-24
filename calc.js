@@ -3,10 +3,10 @@ function whichKey(ke){
   const display = document.getElementById("calc-io");
   const key = ke.key || ke.target.textContent;
 
-if ("0123456789/*-+.()".includes(key)) {
+  if ("0123456789/*-+.()".includes(key)) {
     display.value += key;
   }
-  if (["=", "Enter"].includes(key) && display.value !== "" && !display.value.match(/(\(\))/g)) {s
+  if (["=", "Enter"].includes(key) && display.value !== "" && !display.value.match(/(\(\))/g)) {
     display.value = eval(display.value);
   }
   if (["Backspace", "Delete", "CE"].includes(key)) {
@@ -22,4 +22,4 @@ document.addEventListener("keydown", whichKey);
 document.addEventListener("click",  whichKey);
 document.addEventListener("click", (e) => {document.activeElement.blur(e)});
 
-document.addEventListener("click", (e) => {console.log(e)});
+//document.addEventListener("click", (e) => {console.log(e)});
