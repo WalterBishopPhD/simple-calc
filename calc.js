@@ -3,7 +3,7 @@ function whichKey(ke){
   const display = document.getElementById("calc-io");
   const key = ke.key || ke.target.textContent;
 
-  if ("0123456789/*-+.".includes(key)) {
+  if ("0123456789/*-+.()".includes(key)) {
     display.value += key;
   }
   if (["=", "Enter"].includes(key)) {

@@ -62,8 +62,14 @@ button:hover {
   }
 }
 button.eval {
-  height: 240px;
+  width: 400px;
 }
 button.adv {
   background-color: #07c7e963;
+}
+.clearEntry, .allClear {
+  background-color: #f33de463;
+}
+.pi.adv, .euler.adv {
+  background-color: #12e42e63;
 }
