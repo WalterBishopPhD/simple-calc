@@ -1,2 +1,2 @@
 # simple-projects
-https://WalterBishopPhD.github.io/simple-calc
+https://synthon.github.io/simple-calc
